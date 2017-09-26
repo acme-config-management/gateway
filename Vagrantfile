@@ -15,6 +15,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
   config.vm.provision :shell, path: "init.sh"
   config.vm.provision :shell, path: "nodejs.sh"
+  config.vm.provision :shell, path: "python.sh"
+  config.vm.provision :shell, path: "express-gateway.sh"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
