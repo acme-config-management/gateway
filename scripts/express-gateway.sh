@@ -1,5 +1,5 @@
 npm install -g --unsafe-perm express-gateway
-cp /vagrant/gateway ./
+sudo cp -r /vagrant/gateway $PWD/gateway
 cd gateway
-npm install
+sudo npm install
 npm start
