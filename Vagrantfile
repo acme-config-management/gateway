@@ -13,10 +13,10 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/xenial64"
-  config.vm.provision :shell, path: "init.sh"
-  config.vm.provision :shell, path: "nodejs.sh"
-  config.vm.provision :shell, path: "python.sh"
-  config.vm.provision :shell, path: "express-gateway.sh"
+  config.vm.provision :shell, path: "scripts/init.sh"
+  config.vm.provision :shell, path: "scripts/nodejs.sh"
+  config.vm.provision :shell, path: "scripts/python.sh"
+  config.vm.provision :shell, path: "scripts/express-gateway.sh"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
