@@ -5,11 +5,11 @@ admin:
   hostname: localhost
 apiEndpoints:
   api:
-    host: 'localhost'
-    paths: /serivceA
+    host: localhost
+    paths: '/hello'
 serviceEndpoints:
   serviceA:
-    url: 'http://localhost:4567/hello'
+    url: 'http://localhost:4567'
 policies:
   - basic-auth
   - cors
