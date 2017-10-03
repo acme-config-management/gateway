@@ -5,10 +5,11 @@ admin:
   hostname: localhost
 apiEndpoints:
   api:
-    host: '*'
+    host: 'localhost'
+    paths: /serivceA
 serviceEndpoints:
-  httpbin:
-    url: 'https://httpbin.org'
+  serviceA:
+    url: 'http://localhost:4567/hello'
 policies:
   - basic-auth
   - cors
@@ -25,5 +26,5 @@ pipelines:
     policies:
       - proxy:
           - action:
-              serviceEndpoint: httpbin
-              changeOrigin: true
+              serviceEndpoint: serviceA
+              changeOrigin: false
