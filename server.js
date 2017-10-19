@@ -6,7 +6,7 @@ const { promisify } = require('util');
 const requestAsync = promisify(request);
 
 const app = express();
-const port = 9000;
+const port = 8080;
 let services = [];
 
 process.argv.forEach((service, i) => {
