@@ -20,10 +20,8 @@ services = services.map(service => requestAsync(service));
 app.get('/', (req, res) => {
   Promise.all(services)
     .then(response => {
-      console.log(response)
       res.json({ a: response[0], b: response[1]})
-    })
-    .catch(err => { console.log(err) });
+    });
 });
 
 app.listen(port);
