@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   Promise.all(services.map(service => requestAsync(service)))
     .then(response => {
-      res.json({ a: response[0], b: response[1]})
+      res.json({ a: response[0].body, b: response[1].body})
     });
 });
 
