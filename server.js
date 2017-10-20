@@ -16,10 +16,7 @@ process.argv.forEach((service, i) => {
 });
 
 app.get('/', (req, res) => {
-
-  services = services.map(service => requestAsync(service));
-
-  Promise.all(services)
+  Promise.all(services.map(service => requestAsync(service)))
     .then(response => {
       res.json({ a: response[0], b: response[1]})
     });
